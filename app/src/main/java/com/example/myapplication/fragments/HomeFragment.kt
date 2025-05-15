@@ -1,13 +1,11 @@
 package com.example.myapplication.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.R
 import com.example.myapplication.adapters.RecyclerViewAdapter
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.models.Book
@@ -19,8 +17,8 @@ class HomeFragment : Fragment() {
 
     private lateinit var recyclerAdapter: RecyclerViewAdapter
     private val data = listOf(
-        Book("Hello", ""),
-        Book("Hello1", "", ""),
+        Book("Hello", "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmlsbXxlbnwwfHwwfHx8Mg%3D%3D"),
+        Book("Hello1", "https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmlsbXxlbnwwfHwwfHx8Mg%3D%3D", ""),
         Book("Hello2", "", ""),
         Book("Hello3", "", ""),
         Book("Hello4", "", ""),

@@ -3,6 +3,7 @@ package com.example.myapplication.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.myapplication.databinding.ListItemBinding
 import com.example.myapplication.models.Book
 
@@ -21,8 +22,10 @@ class RecyclerViewAdapter(val data: List<Book>) : RecyclerView.Adapter<RecyclerV
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.binding.apply {
             val datas = data[position]
+
             titleTV.text = datas.title
             detailsTV.text = datas.details
+            Glide.with(root).load(datas.image).into(imageView)
 
         }
     }
